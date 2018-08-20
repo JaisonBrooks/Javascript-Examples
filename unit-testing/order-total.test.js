@@ -1,5 +1,5 @@
 const orderTotal = require('./order-total')
-let key = '123'
+let key = 'api123'
 
 // Sanity Test //
 
@@ -9,11 +9,13 @@ it('works', () =>
 it('calls vat api.com correctly', () => {
   let isFakeFetchCalled = false
   let country_code = 'DE'
+  // Setup fake key
   const fakeProcess = {
     env: {
       VAT_API_KEY: key
     }
   }
+  // Setup fake api call
   const fakeFetch = (url, opts) => {
     expect(opts.headers.apikey).toBe(key)
     expect(url).toBe('https://vatapi.com/v1/country-code-check?code='+ country_code)
