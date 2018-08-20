@@ -7,7 +7,6 @@ it('works', () =>
   expect(1).toBe(1))
 
 it('calls vat api.com correctly', () => {
-  let isFakeFetchCalled = false
   let country_code = 'DE'
   // Setup fake key
   const fakeProcess = {
@@ -19,7 +18,6 @@ it('calls vat api.com correctly', () => {
   const fakeFetch = (url, opts) => {
     expect(opts.headers.apikey).toBe(key)
     expect(url).toBe('https://vatapi.com/v1/country-code-check?code='+ country_code)
-    isFakeFetchCalled = true
     return Promise.resolve({
       json: () => Promise.resolve({
         rates: {
@@ -35,10 +33,8 @@ it('calls vat api.com correctly', () => {
     items: [
       { 'name': 'Dragon waffles', price: 20, quantity: 2 }
     ]
-  }).then(result => {
-    expect(result).toBe(20 * 2 * 1.19)
-    expect(isFakeFetchCalled).toBe(true)
-  })
+  }).then(result => 
+    expect(result).toBe(20 * 2 * 1.19))
 })
 
 it('quantity', () =>
