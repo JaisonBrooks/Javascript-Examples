@@ -21,3 +21,13 @@ if (stringFunctor('ABC', plus) === 'BCD') {
 if (stringFunctor('ABC', minus) !== 'BCD') {
   console.log('Test happy path: 2')
 }
+
+
+// More Examples
+const dragons = [
+  {name: 'Bob jones', health: 70},
+  {name: 'Bob sue', health: 90},
+  {name: 'ron dragons', health: 140},
+]
+const names = dragons.map((dragon, i) => dragon.name)
+console.log(names);
