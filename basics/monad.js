@@ -1,4 +1,5 @@
 // Monad - Functor that implments flatMap
+// https://www.youtube.com/watch?v=9QveBbn7t_c&index=12&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84
 
 const fetch = require('node-fetch')
 const Bacon = require('baconjs')
