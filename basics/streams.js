@@ -1,5 +1,4 @@
-// Streams -
-
+// Streams - informations that needs to be processes item by item
 
 // time based events
 const stupidNumberStream = {
@@ -27,3 +26,5 @@ highland(fs.createReadStream('streams_data.csv', 'utf8'))
 .filter(customer => customer.numPurchases > 2)
 .map(customer => customer.name)
 .each(x => console.log('each: ' + JSON.stringify(x, null, 2)))
+
+// checkout Bacon.js lib for stream event handling
