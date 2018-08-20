@@ -1,0 +1,27 @@
+{
+  "status": 200,
+  "country_code": "LU",
+  "country": "Luxembourg",
+  "vat_applies": true,
+  "rates":  {
+      "standard":  {
+          "value": 17
+          },
+          "reduced":  {
+              "value": 8,
+              "applies_to": false
+          },
+          "reduced_alt":  {
+              "value": null,
+              "applies_to": false
+          },
+          "super_reduced":  {
+              "value": 3,
+              "applies_to": "ebooks"
+          },
+          "parking":  {
+              "value": 14,
+              "applies_to": false
+          }
+      }
+}
