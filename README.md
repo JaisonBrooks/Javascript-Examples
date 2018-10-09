@@ -1,2 +1,2 @@
 # Javascript-Examples
-These are super simple exampels of javascript programming ranging from unit testings to EMCA6 examples.
+These are super simple examples of javascript ranging from unit testings to EMCA6 examples.
